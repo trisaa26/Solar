@@ -3,7 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solar</title>
+
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <title>50–60 karaktera</title>
+    <meta name="description" content="Opis stranice 150-160 karaktera" />
+    <meta property="og:description" content="" />
+    <meta name="keywords" content="Ključne reči" />
+    <meta property="og:title" content="" />
+    <meta name="author" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <!-- twitter meta tagovi -->
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="”theme-color”" content="”#fffff”" />
 
     <link rel="stylesheet" href="assets/styles.css" />
 
@@ -327,20 +348,6 @@
                 alt=""
               />
             </div>
-            <!-- <img
-              data-aos="fade-right"
-              data-aos-duration="2000"
-              src="assets/img/about-us-image-first.png"
-              class="about-us-image-first img-fluid"
-              alt=""
-            />
-            <img
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              src="assets/img/about-us-image-second.png"
-              class="about-us-image-second img-fluid"
-              alt=""
-            /> -->
           </div>
           <div
             class="col-xl-5 offset-xl-1"
@@ -1515,13 +1522,6 @@
                 src="assets/img/gallery-slider-img-4.png"
                 alt=""
             /></a>
-            <!-- <div><img src="assets/img/gallery-slider-img-1.png" alt="" /></div>
-
-            <div><img src="assets/img/gallery-slider-img-2.png" alt="" /></div>
-
-            <div><img src="assets/img/gallery-slider-img-3.png" alt="" /></div>
-
-            <div><img src="assets/img/gallery-slider-img-4.png" alt="" /></div> -->
           </div>
         </div>
       </div>
@@ -1547,7 +1547,6 @@
         </div>
         <div class="row">
           <div class="col-lg-6 reference-left-column">
-            <!-- <div class="reference-left-column"> -->
             <div class="reference-div">
               <img
                 src="assets/img/reference-img-1.png"
@@ -1592,10 +1591,8 @@
                 /></a>
               </div>
             </div>
-            <!-- </div> -->
           </div>
           <div class="col-lg-6 reference-right-column">
-            <!-- <div class="reference-right-column"> -->
             <div class="reference-div reference-left-div">
               <img
                 src="assets/img/reference-img-3.png"
@@ -1640,7 +1637,6 @@
                 /></a>
               </div>
             </div>
-            <!-- </div> -->
           </div>
         </div>
         <div class="reference-button-holder">
@@ -1969,47 +1965,25 @@
         infinite: true,
         dots: false,
         fade: true,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
-        // responsive: [
-        //   {
-        //     breakpoint: 577,
-        //     settings: {
-        //       arrows: false,
-        //       // slidesToShow: 1,
-        //       // slidesToScroll: 1,
-        //     },
-        //   },
-        // ],
-        // pauseOnHover: false,
-        // pauseOnFocus: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
       });
       $(".gallery-slider").slick({
-        //
-        // centerMode: true,
-        // centerPadding: "60px",
-        // centerPadding: "80px",
-        // slidesToShow: 2,
-        //
         slidesToShow: 3,
         centerMode: true,
         centerPadding: "60px",
-        // variableWidth: true,
+
         responsive: [
           {
             breakpoint: 1400,
             settings: {
-              // arrows: false,
               slidesToShow: 2,
-              // slidesToScroll: 1,
             },
           },
           {
             breakpoint: 768,
             settings: {
-              // arrows: false,
               slidesToShow: 1,
-              // slidesToScroll: 1,
             },
           },
         ],
@@ -2022,11 +1996,9 @@
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 3000,
 
-        // pauseOnHover: false,
-        // pauseOnFocus: false,
         arrows: false,
         dots: true,
         responsive: [
@@ -2049,11 +2021,9 @@
         ],
       });
       $(document).ready(function () {
-        // Function to start counting animation
         function startCountingAnimation(entries, observer) {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              // Start counting animation only if it's the first time the section is scrolled into view
               if (!entry.target.classList.contains("counted")) {
                 $(".counter").each(function () {
                   var $this = $(this),
@@ -2084,26 +2054,21 @@
                   );
                 });
 
-                // Mark the section as counted to prevent further counting
                 entry.target.classList.add("counted");
-                // Stop observing once the animation is triggered
+
                 observer.unobserve(entry.target);
               }
             }
           });
         }
 
-        // Create an intersection observer
         const observer = new IntersectionObserver(startCountingAnimation, {
           threshold: 0.5,
         });
 
-        // Observe the target section
         observer.observe(document.querySelector(".counter-section"));
       });
-      Fancybox.bind('[data-fancybox="gallery"]', {
-        // Your custom options for a specific gallery
-      });
+      Fancybox.bind('[data-fancybox="gallery"]', {});
     </script>
   </body>
 </html>
