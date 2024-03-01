@@ -98,3 +98,30 @@ window.addEventListener("scroll", function () {
     header.classList.remove("sticky");
   }
 });
+
+navbarToggler.addEventListener("click", function () {
+  if (header.classList.contains("fixed")) {
+    header.classList.remove("fixed");
+  } else {
+    // header.classList.add("fixed");
+  }
+});
+
+// Closing the navbar when a link is clicked
+const menuLinks = document.querySelectorAll(".navbar-collapse a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navbarCollapse.classList.remove("show");
+    navbarToggler.setAttribute("aria-expanded", "false");
+
+    // Only add sticky class if scrolled below breakpoint
+    if (window.scrollY > breakpoint) {
+      header.classList.add("sticky");
+      header.classList.remove("fixed");
+    } else {
+      header.classList.remove("sticky");
+      header.classList.remove("fixed");
+    }
+  });
+});

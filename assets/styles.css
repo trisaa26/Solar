@@ -5,6 +5,10 @@
   font-family: "Sora", sans-serif;
 }
 
+html {
+  scroll-padding-top: 85px;
+}
+
 body.modal-open {
   overflow: visible !important;
   padding-right: 0 !important;
@@ -164,6 +168,10 @@ body.modal-open {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.header .header-logo {
+  width: 270px;
 }
 
 .hero-section {
@@ -605,6 +613,10 @@ body.modal-open {
   display: none;
 }
 
+.reference-slider {
+  overflow: hidden;
+}
+
 .reference {
   padding-top: 110px;
   padding-bottom: 110px;
@@ -994,9 +1006,6 @@ body.modal-open {
   filter: drop-shadow(0px 0px 0px #101728);
   transform: scale(1.1);
 }
-.partner .partner-slider .col-lg-3:hover {
-  box-shadow: inset 0 0 10px 0 rgba(16, 23, 40, 0.5);
-}
 .partner .slick-dots li button:before {
   color: #959595;
 }
@@ -1064,6 +1073,9 @@ body.modal-open {
 .footer {
   margin-top: 180px;
   padding-bottom: 90px;
+}
+.footer .footer-logo {
+  width: 403px;
 }
 .footer .col-lg-4 {
   padding-right: 0;
@@ -1618,6 +1630,9 @@ body.modal-open {
   }
   .partner .contact-us-holder .contact-us h2 {
     font-size: 20px;
+  }
+  .footer .footer-logo {
+    width: 275px;
   }
   .footer .col-lg-4 img {
     width: 270px;
